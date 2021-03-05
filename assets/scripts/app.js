@@ -7,4 +7,5 @@
 
 $(() => {
   // your JS code goes here
+  $('#sign-up').on('submit', authEvents.onSignUp)
 })
