@@ -4,7 +4,7 @@ const store = require('../store')
 const createSuspect = function (data) {
   console.log('this is the data in create', data)
   return $.ajax({
-    method: 'POST',
+    // method: 'POST',
     url: config.apiUrl + '/suspects/',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -19,31 +19,22 @@ const createSuspect = function (data) {
     }
   })
 }
-const updateSuspect = function () {
+const updateSuspect = function (data) {
+  console.log('this is the data in update', data)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/suspects/',
     headers: {
-      Authorization: 'Bearer' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     },
     data: {
       suspects: {
-        name: 'name',
-        title: 'title',
-        reason: 'reason',
-        probability: 'probability'
+        name: `${data.name}`,
+        title: `${data.title}`,
+        reason: `${data.reason}`,
+        probability: `${data.probability}`
       }
     }
-  })
-}
-const showSuspect = function (id) {
-  return $.ajax({
-    method: 'GET',
-    url: config.apiUrl + '/suspects/' + id,
-    headers: {
-      Authorization: 'Bearer' + store.user.token
-    }
-
   })
 }
 const indexSuspect = function () {
@@ -51,7 +42,7 @@ const indexSuspect = function () {
     method: 'GET',
     url: config.apiUrl + '/suspects/',
     headers: {
-      Authorization: 'Bearer' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     }
 
   })
