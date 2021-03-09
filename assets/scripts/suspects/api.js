@@ -1,10 +1,11 @@
 const config = require('../config')
 const store = require('../store')
 
-const createSuspect = function (data) {
+const createSuspect = function (formData) {
+  const data = formData.suspects
   console.log('this is the data in create', data)
   return $.ajax({
-    // method: 'POST',
+    method: 'POST',
     url: config.apiUrl + '/suspects/',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -32,7 +33,8 @@ const updateSuspect = function (data) {
         name: `${data.name}`,
         title: `${data.title}`,
         reason: `${data.reason}`,
-        probability: `${data.probability}`
+        probability: `${data.probability}`,
+        id: `${data.id}`
       }
     }
   })
@@ -61,7 +63,6 @@ const destroySuspect = function (id) {
 module.exports = {
   createSuspect,
   updateSuspect,
-  showSuspect,
   indexSuspect,
   destroySuspect
 

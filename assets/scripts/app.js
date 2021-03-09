@@ -14,5 +14,5 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#suspects-form').on('submit', suspectsEvents.onCreateSuspect)
   $('#edit-form').on('submit', suspectsEvents.onUpdateSuspect)
-  $('#posts').on('submit', suspectsEvents.onShowPosts)
+  $('#suspects-index').on('click', suspectsEvents.onIndexSuspect)
 })
