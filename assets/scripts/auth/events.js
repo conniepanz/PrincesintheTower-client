@@ -19,6 +19,9 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
+  $('#change-password').show()
+  $('sign-in').show()
+  $('sign-out').show()
 }
 const onChangePassword = function (event) {
   event.preventDefault()

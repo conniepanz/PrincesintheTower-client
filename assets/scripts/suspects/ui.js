@@ -49,6 +49,13 @@ const onIndexSuspectSuccess = function (responseData) {
 const onIndexSuspectFailure = function (response) {
   $('#suspects-display').text('Posts Failed')
 }
+const onDestroySuspectSuccess = function (response) {
+  $('#delete-message').text('Delete Success')
+}
+
+const onDestroySuspectFailure = function (response) {
+  $('#delete-message').text('Delete Failure')
+}
 
 module.exports = {
   onCreateSuspectSuccess,
@@ -56,6 +63,8 @@ module.exports = {
   onUpdateSuspectSuccess,
   onUpdateSuspectFailure,
   onIndexSuspectSuccess,
-  onIndexSuspectFailure
+  onIndexSuspectFailure,
+  onDestroySuspectSuccess,
+  onDestroySuspectFailure
 
 }
