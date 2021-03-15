@@ -16,7 +16,7 @@ This is my second project at General Assembly and my goal was to create a full s
 
 * Front End Repo (https://princesinthetower.herokuapp.com)
 
-* Deployed Client ()
+* Deployed Client ( https://conniepanz.github.io/PrincesintheTower-client/)
 
 * Deployed API (https://princesinthetower.herokuapp.com)
 
