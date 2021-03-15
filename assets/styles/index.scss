@@ -46,7 +46,20 @@ label {
   display: table;
   clear: both;
 }
+
 #body-style {
   background-color:red;
   font: helvetica;
+}
+
+#mystery{
+  display:none;
+}
+
+#auth-section {
+  display:none
+}
+
+#suspect-view {
+  display: none;
 }

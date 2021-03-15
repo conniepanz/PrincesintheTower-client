@@ -15,8 +15,9 @@
       <h1>The Princes in the Tower: Who Did It?</h1>
       <div id="error-message">
           </div>
-          <div id="auth-section">
-            <form id="sign-up">
+           <div>
+             <div id="welcome-view">
+             <form id="sign-up">
               <input name="credentials[email]" type="text" placeholder="an@example.email">
               <input name="credentials[password]" type="password" placeholder="an example password">
               <input name="credentials[password_confirmation]" type="password" placeholder="an example password">
@@ -27,23 +28,23 @@
                 <input name="credentials[password]" type="password" placeholder= "example password">
                 <button>Sign In</button>
               </form>
-                <form id='change-password'>
+            </div>
+             <div id='auth-section'>
+                <form id="change-password">
                   <input type='password' name='passwords[old]' placeholder='Enter Old Password Here' required>
                   <input type='password' name='passwords[new]' placeholder='Enter New Password Here' required>
                   <button>Change Password</button>
               </form>
-                <form id="sign-out">
-                <button>Sign Out</button>
-               </form>
+                <button id="sign-out">Sign Out</button>
+
              </div>
                <div id="mystery">
-               <button>Read about the mystery</button>
              </div>
              <div class="panel panel-default">
                <div class="panel-body">In 1483, two Princes disappeared in the Tower of London. Where did they go? And who was responsible?</div>
              </div>
 
-
+   <div id=suspects-view>
   <div id="suspects">
 
     <div class="container">
@@ -84,5 +85,6 @@
   </div>
   <button id="suspects-index"> Show Posts </button>
   <div id='suspects-display'></div>
+</div>
 </body>
 </html>

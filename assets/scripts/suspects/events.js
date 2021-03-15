@@ -1,7 +1,6 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
-const store = require('../store')
 
 const onCreateSuspect = function () {
   event.preventDefault()
@@ -24,15 +23,17 @@ const onIndexSuspect = function (event) {
     .then(ui.onIndexSuspectSuccess)
     .catch(ui.onIndexSuspectFailure)
 }
-const onDeleteSuspect = function () {
-  api.deleteSuspect(store.campaign._id)
-    .then(ui.deleteSuspectSuccess)
-    .catch(ui.deleteSuspectFailure)
+const onDestroySuspect = function (event) {
+  event.preventDefault()
+  console.log(event.target[0].value)
+  api.destroySuspect(event.target[0].value)
+    .then(ui.onDestroySuspectSuccess)
+    .catch(ui.onDestroySuspectFailure)
 }
 
 module.exports = {
   onCreateSuspect,
   onUpdateSuspect,
   onIndexSuspect,
-  onDeleteSuspect
+  onDestroySuspect
 }

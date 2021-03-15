@@ -32,15 +32,7 @@ const onIndexSuspectSuccess = function (responseData) {
       <p>Reason: ${suspect.reason}</p>
       <p>Probability: ${suspect.probability}</p>
       <p>ID: ${suspect._id}</p>
-        <form class='susp-update-dynamic' data-id=${suspect._id}>
-          <input type='text' name='suspect[name]' placeholder='Enter Suspect Here' required>
-          <input type='text' name='suspect[title]' placeholder='Enter Title Here' required>
-          <input type='text' name='suspect[reason]' placeholder='Enter Reason Here' required>
-          <input type='text' name='suspect[probability]' placeholder='Enter Probability Here' required>
-          <input type='text' name='suspect[id]' placeholder='Enter ID Here' required>
-          <button>Posts</button>
-          <hr>
-          </form>
+
     `
   })
   console.log(suspectHtml)
@@ -50,7 +42,9 @@ const onIndexSuspectFailure = function (response) {
   $('#suspects-display').text('Posts Failed')
 }
 const onDestroySuspectSuccess = function (response) {
+  console.log('Success reached', response)
   $('#delete-message').text('Delete Success')
+  $('#delete-form').trigger('reset')
 }
 
 const onDestroySuspectFailure = function (response) {

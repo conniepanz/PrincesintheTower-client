@@ -42,7 +42,7 @@ const updateSuspect = function (data) {
 const indexSuspect = function () {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/suspects/',
+    url: config.apiUrl + '/suspects',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -54,7 +54,7 @@ const destroySuspect = function (id) {
     method: 'DELETE',
     url: config.apiUrl + '/suspects/' + id,
     headers: {
-      Authorization: 'Bearer' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     }
 
   })

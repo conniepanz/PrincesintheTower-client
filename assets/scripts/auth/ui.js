@@ -3,6 +3,7 @@ const store = require('../store')
 const signUpSuccess = function (response) {
   $('#error-message').text('Thank you for signing up')
   $('#sign-up').trigger('reset')
+  $('#sign-up').hide()
 }
 const signUpFailure = function (response) {
   $('#error-message').text('Sign up failed, try again')
@@ -11,12 +12,20 @@ const signInSuccess = function (response) {
   store.user = response.user
   $('#error-message').text('Thank you for signing in')
   $('#sign-in').trigger('reset')
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('#mystery').show()
+  $('#suspect-view').show()
+  $('#auth-section').show()
 }
+
 const signInFailure = function (response) {
   $('#error-message').text('Sign in failed, try again')
 }
 const changePasswordSuccess = function () {
-  $('#error-message').text('Your Password Has Been Changed')
+  $('#change-password').trigger('reset')
+  $('#change-password').hide()
+  $('#error-message').text('Password successfully changed!')
 }
 const changePasswordFailure = function (response) {
   $('#error-message').text('Password failed')
@@ -25,7 +34,8 @@ const signOutSuccess = function () {
   $('#error-message').text('Signed out successfully')
   $('#error-message').removeClass()
   $('#error-message').addClass('success')
-  $('form').trigger('reset')
+  $('#sign-out').trigger('reset')
+  $('#auth-section').hide()
   console.log('signOutSuccess ran and nothing was returned!')
 }
 

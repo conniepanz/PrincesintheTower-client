@@ -15,17 +15,17 @@ const signIn = function (formData) {
     data: formData
   })
 }
-const changePassword = function (data) {
+const changePassword = function (formData) {
   return $.ajax({
-    url: config.apiUrl + '/change-password',
     method: 'PATCH',
+    url: config.apiUrl + '/change-password',
+    data: formData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
-    },
-    data: data
-
+    }
   })
 }
+
 const signOut = function () {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
