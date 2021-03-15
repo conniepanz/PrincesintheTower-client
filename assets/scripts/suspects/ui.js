@@ -42,7 +42,6 @@ const onIndexSuspectFailure = function (response) {
   $('#suspects-display').text('Posts Failed')
 }
 const onDestroySuspectSuccess = function (response) {
-  console.log('Success reached', response)
   $('#delete-message').text('Delete Success')
   $('#delete-form').trigger('reset')
 }

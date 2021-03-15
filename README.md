@@ -12,7 +12,7 @@ This is my second project at General Assembly and my goal was to create a full s
 * Learn to confidently present your work to a technical audience (5-10 minute presentation)
 
 
- #gi Links
+ #gigit  Links
 
 * Front End Repo (https://princesinthetower.herokuapp.com)
 

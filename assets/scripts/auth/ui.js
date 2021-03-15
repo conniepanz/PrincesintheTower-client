@@ -36,7 +36,6 @@ const signOutSuccess = function () {
   $('#error-message').addClass('success')
   $('#sign-out').trigger('reset')
   $('#auth-section').hide()
-  console.log('signOutSuccess ran and nothing was returned!')
 }
 
 const signOutFailure = function (error) {

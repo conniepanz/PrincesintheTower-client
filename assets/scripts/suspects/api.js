@@ -21,7 +21,6 @@ const createSuspect = function (formData) {
   })
 }
 const updateSuspect = function (data) {
-  console.log('this is the data in update', data)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/suspects/',
