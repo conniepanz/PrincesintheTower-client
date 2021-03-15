@@ -3,16 +3,16 @@ In 1485, two young Princes disappeared from the Tower of London. To this day, no
 
 This is my second project at General Assembly and my goal was to create a full stack web application hosted on Github pages with an API hosted on Heroku. The goals were to:
 
-*Build a single-page application (SPA) with basic user authentication (sign up, sign in, sign out, change password) that interacts with a custom API that you build
+* Build a single-page application (SPA) with basic user authentication (sign up, sign in, sign out, change password) that interacts with a custom API that you build
 
-*Build an app that can create, read, update, and delete data in a database
+* Build an app that can create, read, update, and delete data in a database
 
-*Learn to create user stories and wireframes (before writing code) as part of planning out your app.
+* Learn to create user stories and wireframes (before writing code) as part of planning out your app.
 
-*Learn to confidently present your work to a technical audience (5-10 minute presentation)
+* Learn to confidently present your work to a technical audience (5-10 minute presentation)
 
 
-* Links
+ #gi Links
 
 * Front End Repo (https://princesinthetower.herokuapp.com)
 
