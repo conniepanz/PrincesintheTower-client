@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>The Princes in the Tower</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body id="body-style">
+      <h1>The Princes in the Tower: Who Did It?</h1>
+      <div id="error-message">
+          </div>
+           <div>
+             <div id="welcome-view">
+             <form id="sign-up">
+              <input name="credentials[email]" type="text" placeholder="an@example.email">
+              <input name="credentials[password]" type="password" placeholder="an example password">
+              <input name="credentials[password_confirmation]" type="password" placeholder="an example password">
+              <button id="sign-up-button">Sign Up</button>
+            </form>
+              <form id="sign-in">
+                <input name="credentials[email]" type="text" placeholder="an@example.email">
+                <input name="credentials[password]" type="password" placeholder= "example password">
+                <button>Sign In</button>
+              </form>
+            </div>
+             <div id='auth-section'>
+                <form id="change-password">
+                  <input type='password' name='passwords[old]' placeholder='Enter Old Password Here' required>
+                  <input type='password' name='passwords[new]' placeholder='Enter New Password Here' required>
+                  <button>Change Password</button>
+              </form>
+                <button id="sign-out">Sign Out</button>
+
+             </div>
+               <div id="mystery">
+                 <div class="panel panel-default">
+               <div class="panel-body">In 1483, two Princes disappeared in the Tower of London. Where did they go? And who was responsible?</div>
+             </div>
+           </div>
+
+   <div id=suspects-view>
+  <div id="suspects">
+
+    <div class="container">
+      <form id="suspects-form">
+        <label for="name">Name</label>
+          <input class="sus" type="text" name="suspects[name]" placeholder="Name">
+        <label for="title">Title</label>
+          <input class="sus" type="text" name="suspects[title]" placeholder="Title">
+        <label for="name">Probabilty</label>
+          <input class="sus" name="suspects[probability]" type="text" placeholder="Probability">
+        <label for="reason">Reason</label>
+          <textarea name="suspects[reason]" placeholder="Write Your Reason"></textarea>
+        <button type="submit">Submit</button>
+        <button type="submit">Edit</button>
+      </form>
+        <div id="message"></div>
+    </div>
+  </div>
+
+  <div id="update">
+
+    <div class="container">
+      <form id="edit-form">
+        <label for="id">ID</label>
+          <input class="sus" type="text" name="suspects[id]" placeholder="ID">
+        <label for="name">Name</label>
+          <input class="sus" type="text" name="suspects[name]" placeholder="Name">
+        <label for="title">Title</label>
+          <input class="sus" type="text" name="suspects[title]" placeholder="Title">
+        <label for="name">Probabilty</label>
+          <input class="sus" name="suspects[probabilty]" type="text" placeholder="Probability">
+        <label for="reason">Reason</label>
+          <textarea name="suspects[reason]" placeholder="Write Your Reason"></textarea>
+        <button type="submit">Update Post</button>
+      </form>
+        <div id="update-message"></div>
+    </div>
+  </div>
+  <button id="suspects-index"> Show Posts </button>
+  <div id='suspects-display'></div>
+</div>
+</body>
+</html>
