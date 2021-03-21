@@ -21,9 +21,7 @@ const onUpdateSuspectFailure = function (response) {
 }
 
 const onIndexSuspectSuccess = function (responseData) {
-  console.log('this')
   const suspects = responseData.suspects
-  console.log('these are the suspects', suspects)
   let suspectHtml = ''
   suspects.forEach(suspect => {
     suspectHtml += `
@@ -35,7 +33,6 @@ const onIndexSuspectSuccess = function (responseData) {
 
     `
   })
-  console.log(suspectHtml)
   $('#suspects-display').html(suspectHtml)
 }
 const onIndexSuspectFailure = function (response) {

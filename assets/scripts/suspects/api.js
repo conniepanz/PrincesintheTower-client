@@ -3,7 +3,6 @@ const store = require('../store')
 
 const createSuspect = function (formData) {
   const data = formData.suspects
-  console.log('this is the data in create', data)
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/suspects/',

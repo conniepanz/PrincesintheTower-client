@@ -15,7 +15,7 @@ const signInSuccess = function (response) {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#mystery').show()
-  $('#suspect-view').show()
+  $('#suspects-view').show()
   $('#auth-section').show()
 }
 
@@ -36,6 +36,8 @@ const signOutSuccess = function () {
   $('#error-message').addClass('success')
   $('#sign-out').trigger('reset')
   $('#auth-section').hide()
+  $('#suspects-view').hide()
+  $('#mystery').hide()
 }
 
 const signOutFailure = function (error) {

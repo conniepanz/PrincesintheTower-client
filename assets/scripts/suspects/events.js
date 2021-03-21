@@ -25,7 +25,6 @@ const onIndexSuspect = function (event) {
 }
 const onDestroySuspect = function (event) {
   event.preventDefault()
-  console.log(event.target[0].value)
   api.destroySuspect(event.target[0].value)
     .then(ui.onDestroySuspectSuccess)
     .catch(ui.onDestroySuspectFailure)
